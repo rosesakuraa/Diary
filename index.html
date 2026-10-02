@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diary — un endroit où déposer ses pensées</title>
+<style>
+:root{--bg:#100c1d;--panel:#171126;--panel2:#211936;--text:#f6f0e8;--muted:#b9aecb;--gold:#e9c66b;--lav:#bba4ff;--line:#33284b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 10%,#281b48 0,transparent 30%),radial-gradient(circle at 90% 35%,#24133d 0,transparent 28%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(16,12,29,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}.brand{font:700 30px Georgia,serif;letter-spacing:-1px}.brand span{color:var(--gold)}nav{display:flex;gap:26px;align-items:center}nav a{color:#d9d0e3;font-size:14px}nav .plus{color:var(--gold)}.menu{display:none;background:none;border:0;color:white;font-size:24px}.hero{min-height:720px;display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;align-items:center;padding:90px 9vw}.tag,.heading>span,.mini,.gold{color:var(--gold);font-size:12px;letter-spacing:2px;font-weight:700}.hero h1{font:500 clamp(54px,7vw,92px)/.95 Georgia,serif;margin:18px 0}.hero h1 i,.welcome em,.plus-section h2 i{color:var(--lav)}.hero-copy p{max-width:650px;color:var(--muted);font-size:18px}.buttons{display:flex;gap:14px;margin:30px 0}.btn,.journal-bottom button,.write button,.gold-btn{border:1px solid var(--gold);border-radius:999px;padding:13px 21px;background:var(--gold);color:#19121f;font-weight:700;cursor:pointer}.btn.ghost{background:transparent;color:var(--text);border-color:#58496d}.trust{font-size:13px;color:#91859f}.hero-note{background:linear-gradient(145deg,#f4ead8,#d9c7a8);color:#332741;padding:34px;border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.35);transform:rotate(2deg);max-width:410px;justify-self:center}.note-top{display:flex;justify-content:space-between;font-size:11px;letter-spacing:2px}.moon{text-align:center;font-size:74px;margin:30px 0 10px}.hero-note p{font:24px/1.35 Georgia,serif}.hero-note small{color:#705f73}.line{height:1px;background:#b8a88d;margin:30px 0}.scribble{font:italic 18px Georgia,serif}.welcome{padding:100px 9vw;display:grid;grid-template-columns:1fr 1fr;gap:8vw;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}h2{font:500 clamp(40px,5vw,64px)/1 Georgia,serif;margin:14px 0 20px}.welcome p,.heading p{color:var(--muted);font-size:17px;max-width:650px}.section{padding:100px 9vw}.journal{max-width:850px;margin:50px auto 0;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:18px;padding:25px}.journal-head{display:flex;justify-content:space-between;color:var(--gold);font-size:11px;letter-spacing:1.5px}.journal input,.journal textarea,.write textarea,.composer input{width:100%;background:transparent;border:0;outline:0;color:var(--text);font:inherit}.journal input{font:32px Georgia,serif;margin:30px 0 12px}.journal textarea{min-height:260px;resize:vertical}.journal-bottom{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid var(--line);padding-top:20px}.journal select{background:#211936;color:var(--text);border:1px solid var(--line);padding:10px;border-radius:9px}.wall-section{background:#0d0a17}.center{text-align:center}.write{max-width:760px;margin:45px auto 25px;border:1px solid var(--line);background:#151022;border-radius:16px;padding:18px}.avatar{color:var(--gold);margin-bottom:8px}.write textarea{min-height:90px;resize:vertical}.write button{margin-top:12px}.posts{max-width:760px;margin:auto}.post{border-bottom:1px solid var(--line);padding:28px 0}.post small{color:var(--gold);letter-spacing:1px}.post p{font:20px/1.55 Georgia,serif}.episodes{display:grid;gap:18px;margin-top:45px}.episodes article{display:grid;grid-template-columns:70px 1fr;gap:25px;padding:30px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}.ep-icon{font-size:34px;color:var(--gold)}.episodes h3{font:26px Georgia,serif;margin:8px 0}.episodes p{color:var(--muted)}.episodes span{color:var(--gold)}.ep-cta{margin-top:35px;padding:45px;border-radius:20px;background:linear-gradient(135deg,#271a45,#171126);display:grid;grid-template-columns:1fr 1fr;gap:30px}.ep-cta a{color:var(--gold)}.chat{max-width:760px;margin:45px auto 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#151022}.chat-label{padding:15px 20px;border-bottom:1px solid var(--line);font-size:11px;letter-spacing:1.5px;color:var(--gold)}.chat-label i{display:inline-block;width:7px;height:7px;background:#8fd3a5;border-radius:50%;margin-left:7px}.messages{min-height:300px}.chat #messages{padding:25px}.bubble{padding:13px 16px;border-radius:15px;margin:10px 0;max-width:78%}.bubble.ai{background:#251b39}.bubble.user{background:#3a2b59;margin-left:auto}.composer{display:flex;border-top:1px solid var(--line)}.composer input{padding:17px}.composer button{width:55px;border:0;background:var(--gold);cursor:pointer}.chat>small{display:block;padding:12px 18px;color:#82768f}.plus-section{padding:100px 9vw;background:linear-gradient(140deg,#171025,#2a1b45)}.plus-inner{max-width:800px}.price{display:flex;align-items:baseline;gap:8px;margin:25px 0}.price strong{font:50px Georgia,serif}.price span{color:var(--muted)}.plus-section li{list-style:none;margin:13px 0;color:#ded5e7}.plus-section ul{padding:0}.gold-btn{margin-top:20px}footer{padding:45px 9vw;border-top:1px solid var(--line);color:#a99db8}footer p{margin:8px 0}.glow{position:fixed;width:300px;height:300px;border-radius:50%;filter:blur(100px);opacity:.12;pointer-events:none}.glow1{background:#9d70ff;top:10%;left:-120px}.glow2{background:#e9c66b;right:-120px;top:55%}@media(max-width:800px){nav{display:none}.menu{display:block}.hero,.welcome,.ep-cta{grid-template-columns:1fr}.hero{padding-top:55px}.hero-note{margin-top:20px}.section,.welcome,.plus-section{padding:70px 6vw}.journal-bottom{align-items:stretch;flex-direction:column}.episodes article{grid-template-columns:45px 1fr}}
+</style>
+</head>
+<body>
+<div class="glow glow1"></div><div class="glow glow2"></div><div class="glow glow3"></div>
+
+<header>
+  <a class="brand" href="#home">diary<span>✦</span></a>
+  <nav>
+    <a href="#journal">Journal</a><a href="#wall">Le mur</a><a href="#episodes">Épisodes</a><a href="#talk">Parler à Diary</a>
+    <a class="plus" href="#plus">Diary+</a>
+  </nav>
+  <button class="menu">☰</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <div class="tag">UN PETIT COIN POUR TOI</div>
+    <h1>Dépose ce que<br><i>tu portes.</i></h1>
+    <p>Un endroit doux pour écrire ta journée, mettre des mots sur ce que tu ressens et découvrir les histoires de personnes qui, elles aussi, avaient besoin de parler.</p>
+    <div class="buttons"><a class="btn main" href="#journal">Écrire maintenant <span>→</span></a><a class="btn ghost" href="#wall">Explorer le mur</a></div>
+    <div class="trust"><span>✦</span> Anonyme &nbsp;·&nbsp; Bienveillant &nbsp;·&nbsp; À ton rythme</div>
+  </div>
+  <div class="hero-note">
+    <div class="note-top"><span>MON JOURNAL</span><span>✦</span></div>
+    <div class="moon">☾</div>
+    <p>« Je ne sais pas vraiment<br>quoi écrire ce soir… »</p>
+    <small>Et si tu commençais juste par ça ?</small>
+    <div class="line"></div><div class="scribble">Tu n'as pas besoin de trouver<br>les bons mots.</div>
+  </div>
+</section>
+
+<section class="welcome">
+  <div><span class="mini">ICI, PAS BESOIN DE FAIRE SEMBLANT.</span><h2>Un endroit où tu peux<br><em>simplement être toi.</em></h2></div>
+  <p>Diary mélange journal intime, communauté et IA pour créer un espace où les mots ont le droit d'exister, même quand ils sont difficiles à trouver.</p>
+</section>
+
+<section id="journal" class="section">
+  <div class="heading"><span>01 · TON ESPACE</span><h2>Mon journal</h2><p>Un carnet rien qu'à toi. Écris sans te demander si c'est bien, intéressant ou parfait.</p></div>
+  <div class="journal">
+    <div class="journal-head"><span>☾ &nbsp; JOURNAL DE CE SOIR</span><span id="date"></span></div>
+    <input id="title" placeholder="Un titre, une phrase, ou rien du tout…">
+    <textarea id="entry" placeholder="Qu'est-ce que tu as sur le cœur ?"></textarea>
+    <div class="journal-bottom"><label>Mon humeur <select id="mood"><option>☁️ Un peu dans les nuages</option><option>🌙 Calme</option><option>🌧️ Pas très bien</option><option>✨ Bien</option><option>🔥 Énervé·e</option></select></label><button onclick="saveEntry()">Garder dans mon journal →</button></div>
+    <div id="saved"></div>
+  </div>
+</section>
+
+<section id="wall" class="section wall-section">
+  <div class="heading center"><span>02 · LA COMMUNAUTÉ</span><h2>Le mur</h2><p>Des pensées déposées anonymement. Peut-être que l'une d'elles te parlera.</p></div>
+  <div class="write"><div class="avatar">✦</div><textarea id="post" maxlength="600" placeholder="Écris quelque chose que tu aimerais déposer ici…"></textarea><button onclick="post()">Publier anonymement</button></div>
+  <div id="posts" class="posts"></div>
+</section>
+
+<section id="episodes" class="section">
+  <div class="heading"><span>03 · LES HISTOIRES</span><h2>Les Épisodes</h2><p>Des histoires longues, écrites par la communauté. <b>Tout le monde peut les lire.</b></p></div>
+  <div class="episodes">
+    <article><div class="ep-icon">♡</div><div><small>COEURS BRISÉS · 8 MIN</small><h3>« J'ai cru que je ne m'en remettrais jamais. »</h3><p>Une histoire sur ce qui vient après une rupture, quand les journées semblent avoir perdu leurs couleurs.</p><span>Lire l'épisode →</span></div></article>
+    <article><div class="ep-icon">☾</div><div><small>JOURNÉES DIFFICILES · 6 MIN</small><h3>« Aujourd'hui, j'avais juste besoin de ralentir. »</h3><p>Quelques mots sur le droit de ne pas être bien tous les jours.</p><span>Lire l'épisode →</span></div></article>
+    <article><div class="ep-icon">✦</div><div><small>AMITIÉ · 7 MIN</small><h3>« Certaines amitiés changent sans prévenir. »</h3><p>Quand une personne importante s'éloigne et qu'on ne sait plus quoi lui dire.</p><span>Lire l'épisode →</span></div></article>
+  </div>
+  <div class="ep-cta"><div><span>DIARY+</span><h3>Ton histoire mérite<br>d'être racontée.</h3></div><p>Crée tes propres Épisodes longs, organise-les en séries et partage-les avec la communauté.</p><a href="#plus">Découvrir Diary+ <b>→</b></a></div>
+</section>
+
+<section id="talk" class="section talk-section">
+  <div class="heading"><span>04 · QUAND TU AS BESOIN DE PARLER</span><h2>Parler à Diary</h2><p>Une conversation privée pour déposer ce que tu as en tête.</p></div>
+  <div class="chat">
+    <div class="chat-label">DIARY · EN LIGNE <i></i></div>
+    <div id="messages"><div class="bubble ai">Bonsoir 🤍<br>Je suis là. Tu peux me raconter ta journée comme elle vient.</div></div>
+    <div class="composer"><input id="chat" placeholder="Écris ce que tu ressens…" onkeydown="if(event.key==='Enter')send()"><button onclick="send()">↑</button></div>
+    <small>Diary est un outil d'accompagnement et d'écriture, pas un professionnel de santé.</small>
+  </div>
+</section>
+
+<section id="plus" class="plus-section">
+  <div class="plus-inner">
+    <span class="gold">✦ DIARY+</span><h2>Va un peu<br><i>plus loin.</i></h2><p>Le cœur de Diary reste gratuit. Diary+ te donne les outils pour raconter davantage, créer et explorer.</p>
+    <div class="price"><strong>4,99€</strong><span>/ mois</span></div>
+    <ul><li>✦ Crée des Épisodes longs</li><li>✦ Crée des séries d'histoires</li><li>✦ Outils IA avancés pour écrire</li><li>✦ Récapitulatifs et analyses de tes propres écrits</li></ul>
+    <button class="gold-btn" onclick="alert('Le paiement sera connecté lors de la prochaine étape.')">Commencer Diary+ →</button>
+  </div>
+</section>
+</main>
+
+<footer><div class="brand">diary<span>✦</span></div><p>Ton espace. Tes mots. À ton rythme.</p><small>Confidentialité · Règles de la communauté · Signaler un contenu</small></footer>
+<script>
+const $=s=>document.querySelector(s);
+document.addEventListener("DOMContentLoaded",()=>{
+  $("#date").textContent=new Intl.DateTimeFormat("fr-FR",{day:"numeric",month:"long",year:"numeric"}).format(new Date());
+  renderPosts();
+  const saved=localStorage.getItem("diary_saved");
+  if(saved) $("#saved").innerHTML='<div style="margin-top:14px;color:#e9c66b">✓ Ta dernière entrée est enregistrée sur cet appareil.</div>';
+});
+function saveEntry(){
+  const title=$("#title").value.trim(), entry=$("#entry").value.trim(), mood=$("#mood").value;
+  if(!entry){$("#entry").focus();return}
+  localStorage.setItem("diary_saved",JSON.stringify({title,entry,mood,date:new Date().toISOString()}));
+  $("#saved").innerHTML='<div style="margin-top:14px;color:#e9c66b">✓ Entrée enregistrée.</div>';
+}
+function post(){
+  const text=$("#post").value.trim(); if(!text)return;
+  const posts=JSON.parse(localStorage.getItem("diary_posts")||"[]");
+  posts.unshift({text,date:new Date().toISOString()}); localStorage.setItem("diary_posts",JSON.stringify(posts.slice(0,30)));
+  $("#post").value=""; renderPosts();
+}
+function renderPosts(){
+  const defaults=[
+    ["🌧️ Journées difficiles","Aujourd'hui, je n'avais pas beaucoup d'énergie. Alors j'ai simplement fait de mon mieux. Et finalement, c'était déjà beaucoup."],
+    ["✨ Motivation","Petit rappel : tu n'as pas besoin d'aller vite pour avancer."],
+    ["🫂 Amitié","Certaines personnes arrivent dans nos vies sans prévenir et finissent par y laisser une lumière."]
+  ];
+  const own=JSON.parse(localStorage.getItem("diary_posts")||"[]").map(x=>["✦ Pensée anonyme",x.text]);
+  $("#posts").innerHTML=[...own,...defaults].map(([cat,text])=>`<article class="post"><small>${cat}</small><p>« ${escapeHtml(text)} »</p><div style="color:#82768f;font-size:12px">Anonyme · maintenant</div></article>`).join("");
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+function send(){
+  const input=$("#chat"), text=input.value.trim(); if(!text)return;
+  $("#messages").insertAdjacentHTML("beforeend",`<div class="bubble user">${escapeHtml(text)}</div>`);
+  input.value="";
+  setTimeout(()=>$("#messages").insertAdjacentHTML("beforeend",`<div class="bubble ai">${reply(text)}</div>`),450);
+}
+function reply(t){
+  const x=t.toLowerCase();
+  if(x.includes("triste")||x.includes("mal")||x.includes("difficile")) return "Je t'écoute. Tu n'as pas besoin de tout expliquer parfaitement. Qu'est-ce qui a été le plus difficile aujourd'hui ?";
+  if(x.includes("merci")) return "Avec plaisir 🤍 Tu peux rester ici aussi longtemps que tu veux.";
+  return "Je suis là. Tu peux continuer comme ça vient, même si tes pensées sont dans le désordre.";
+}
+</script>
+</body></html>
